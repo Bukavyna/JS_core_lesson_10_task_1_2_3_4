@@ -15,53 +15,91 @@ colorBox.addEventListener(`mouseout`, function () {
 });
 
 
-//2 При кліку мишкою міняються кольори тексту !!
+//2 Міняється фон і текст блока при наведенні мишки і кліку на нього !!
+
+document.querySelector(`.secret`).addEventListener('mouseover', function() {
+	event.target.style.backgroundColor = `yellow`;
+	event.target.innerHTML = `<strong>Хочеш знати який?</strong>`;
+});
+
+document.querySelector(`.secret`).addEventListener('mouseout', function() {
+	event.target.style.backgroundColor = `#891383`;
+	event.target.innerHTML = `<strong>У мене є секрет!</strong>`;
+});
+
+document.querySelector(`.secret`).addEventListener(`mousedown`, function () {
+	event.target.innerHTML = `А я тобі не скажу!`;
+	event.target.style.color = `white`;
+	event.target.style.backgroundColor = `#000000`;
+});
+
+document.querySelector(`.secret`).addEventListener(`mouseup`, function () {
+	event.target.style.backgroundColor = `yellow`;
+	event.target.innerHTML = `<strong>Хочеш знати який?</strong>`;
+	event.target.style.color = `#000000`;
+});
+
+
+//3 При кліку на дів вискакує 'промпт' і вводиться URL зображення!!!
+
+function urlBackground(urlImage) {
+	const image = prompt(`Введіть URL`);
+
+	if (image !== null) {
+		urlImage.style.backgroundImage = `url(${image})`;
+	}
+}
+
+
+//4 При кліку мишкою міняються кольори тексту !!!!
 
 document.querySelector('.red').addEventListener('mousedown', function () {
 	event.target.style.color = 'red';
 	event.target.style.backgroundColor = `yellow`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
 document.querySelector(`.yellow`).addEventListener(`mousedown`, function () {
 	event.target.style.color = `yellow`;
 	event.target.style.backgroundColor = `green`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
 document.querySelector(`.green`).addEventListener(`mousedown`, function () {
 	event.target.style.color = `green`;
 	event.target.style.backgroundColor = `blue`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
 document.querySelector(`.blue`).addEventListener(`mousedown`, function () {
 	event.target.style.color = `blue`;
 	event.target.style.backgroundColor = `orange`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
 document.querySelector(`.orange`).addEventListener(`mousedown`, function () {
 	event.target.style.color = `orange`;
 	event.target.style.backgroundColor = `gray`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
 document.querySelector(`.gray`).addEventListener(`mousedown`, function () {
 	event.target.style.color = `gray`;
 	event.target.style.backgroundColor = `red`;
-	// event.target.style.listStyleType = `upper-roman`;
-	// event.target.style.transition = `2s`;
 });
 
-// document.querySelector(`ol`).addEventListener('mouseup', function () {
-//  event.target.style.color = `red`;
-//  event.target.style.backgroundColor = `black`;
-//  event.target.style.listStyleType = `square`;
-//  event.target.style.transition = `10s`;
-// });
+document.querySelector(`ol`).addEventListener('mouseup', function () {
+ event.target.style.backgroundColor = `black`;
+ event.target.style.listStyleType = `square`;
+ event.target.style.transition = `10s`;
+});
+
+
+// function changeColor(color) {
+// 	const activeItem = document.querySelector(`.active`);
+// 	if (activeItem) {
+// 		activeItem.classList.remove('active');
+// 	}
+//
+// 	const selectedItem = event.target;
+// 	selectedItem.style.color = color;
+// 	selectedItem.classList.add('.active');
+// }
+
+
+//

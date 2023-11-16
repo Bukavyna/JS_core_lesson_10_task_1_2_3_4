@@ -5,9 +5,15 @@
 	text-decoration: none;
 }
 
+body {
+	padding-left: 50px;
+}
+
+/*1 Зміна кольору фону за допомоги "mouseover" і "mouseout"!*/
+
 #box {
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	border: 2px solid black;
 	color: white;
 	//background-color: purple;
@@ -15,7 +21,54 @@
 	text-align: center;
 	font-size: 35px;
 	font-style: italic;
-	margin: 10px 0 0 50px;
+	margin-top: 50px;
 	border-radius: 20px;
 	padding-top: 70px;
 }
+
+
+/*2 Міняється фон і текст блока при наведенні мишки і кліку на нього !!*/
+
+.secret {
+	width: 250px;
+	height: 250px;
+	background-color: #891383;
+	border: 2px solid #FAA613;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+/*3 При кліку на дів вискакує 'промпт' і вводиться URL зображення!!!*/
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 800px;
+}
+
+.picture {
+	width: 250px;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+	border: black 2px solid;
+}
+
+
+/*4 При кліку мишкою міняються кольори тексту !!!!*/
+
+ol li.active {
+
+}
+
+li {
+	width: 250px;
+	margin-top: 30px;
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+
