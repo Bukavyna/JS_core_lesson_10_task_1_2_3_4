@@ -47,11 +47,13 @@ function urlBackground(urlImage) {
 
 	if (image !== null) {
 		urlImage.style.backgroundImage = `url(${image})`;
+		urlImage.innerText = ``;
+		urlImage.style.borderRadius = `0`;
 	}
 
 	else {
 		urlImage.style.borderRadius = `75px`;
-		urlImage.textContent =`EMPTY`
+		urlImage.innerText =`EMPTY`
 		urlImage.style.textAlign = `center`;
 		urlImage.style.color = `white`;
 		urlImage.style.fontSize = `50px`;
