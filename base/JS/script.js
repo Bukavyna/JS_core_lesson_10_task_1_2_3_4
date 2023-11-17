@@ -48,6 +48,17 @@ function urlBackground(urlImage) {
 	if (image !== null) {
 		urlImage.style.backgroundImage = `url(${image})`;
 	}
+
+	else {
+		urlImage.style.borderRadius = `75px`;
+		urlImage.textContent =`EMPTY`
+		urlImage.style.textAlign = `center`;
+		urlImage.style.color = `white`;
+		urlImage.style.fontSize = `50px`;
+		urlImage.style.backgroundColor = `red`;
+		urlImage.style.transition = `5s`;
+		urlImage.style.paddingTop = `90px`
+	}
 }
 
 
